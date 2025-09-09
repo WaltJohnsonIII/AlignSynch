@@ -1,0 +1,8 @@
+ignoredBuiltDependencies:
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - core-js
+  - lefthook
+  - sharp
+  - yarn

@@ -1,6 +1,10 @@
-**/next.config.mjs**
+import withBundleAnalyzer from '@next/bundle-analyzer';
 
-```js
+const bundleAnalyzer = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+  openAnalyzer: false, // Don't auto-open browser
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -12,21 +16,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: "/ingest/static/:path*",
-        destination: "https://us-assets.i.posthog.com/static/:path*",
-      },
-      {
-        source: "/ingest/:path*",
-        destination: "https://us.i.posthog.com/:path*",
-      },
-    ];
+  experimental: {
+    webpackBuildWorker: true,
   },
-  // This is required to support PostHog trailing slash API requests
-  skipTrailingSlashRedirect: true,
 };
 
-export default nextConfig;
-```
+export default bundleAnalyzer(nextConfig);

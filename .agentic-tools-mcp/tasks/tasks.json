@@ -1,13 +1,1 @@
-{
-  "projects": [
-    {
-      "id": "ef983c65-34fd-4774-bd3d-02b2142b6984",
-      "name": "AlignSynch",
-      "description": "Launch MVP",
-      "createdAt": "2025-09-07T06:42:23.712Z",
-      "updatedAt": "2025-09-07T06:42:23.712Z"
-    }
-  ],
-  "tasks": [],
-  "subtasks": []
-}
+{"projects": [{"id": "ef983c65-34fd-4774-bd3d-02b2142b6984","name": "AlignSynch","description": "Launch MVP","createdAt": "2025-09-07T06:42:23.712Z","updatedAt": "2025-09-07T06:42:23.712Z"}], "tasks": [], "subtasks": []}

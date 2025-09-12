@@ -1,0 +1,10 @@
+Analyze this prompt for Spec Kit workflow alignment: "Create auth feature"
+
+Provide:
+1. Overall score (1-10)
+2. Breakdown by criteria:
+   - Spec Alignment (40%)
+   - Workflow Stage (30%)
+   - Action Clarity (30%)
+3. Specific suggestions for improvement
+4. Example of improved prompt

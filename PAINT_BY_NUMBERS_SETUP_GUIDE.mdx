@@ -1,0 +1,430 @@
+# 🎨 Paint-by-Numbers Setup Guide: Complete Toolchain
+
+**Date**: 2025-01-10
+**Purpose**: Step-by-step guide for setting up the complete spec-kit workflow
+
+## 🚀 **Phase 1: Repository & Environment Setup**
+
+### **Step 1.1: Clone Repository**
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd <project-directory>
+
+# Verify you're in the right directory
+pwd
+ls -la
+```
+
+### **Step 1.2: Initialize Worktree Structure**
+```bash
+# Create worktree branches
+git worktree add ../<project>-auth auth-branch
+git worktree add ../<project>-main main-branch
+git worktree add ../<project>-copilot copilot-branch
+
+# Verify worktrees
+git worktree list
+```
+
+### **Step 1.3: Install Core CLI Tools**
+```bash
+# Essential CLI tools
+npm install -g @vercel/cli
+npm install -g @github/cli
+npm install -g @google-cloud/cli
+npm install -g @cursor/cli
+npm install -g @bracel/cli
+npm install -g @biomejs/cli
+npm install -g @playwright/cli
+
+# Verify installations
+vercel --version
+gh --version
+gcloud --version
+cursor --version
+bracel --version
+biome --version
+playwright --version
+```
+
+### **Step 1.4: Configure Environment Variables**
+```bash
+# Create environment files
+cp .env.example .env.local
+cp .env.example .env.development
+cp .env.example .env.production
+
+# Edit .env.local with your values
+nano .env.local
+```
+
+**Required Environment Variables:**
+```bash
+# GitHub
+GITHUB_TOKEN=your_github_token_here
+GITHUB_REPO=your_repo_name
+
+# Vercel
+VERCEL_TOKEN=your_vercel_token_here
+VERCEL_PROJECT_ID=your_project_id
+
+# Google Cloud
+GOOGLE_CLOUD_PROJECT=your_project_id
+GOOGLE_APPLICATION_CREDENTIALS=path/to/credentials.json
+
+# Database
+DATABASE_URL=your_database_url
+DATABASE_PASSWORD=your_password
+
+# API Keys
+OPENAI_API_KEY=your_openai_key
+ANTHROPIC_API_KEY=your_anthropic_key
+```
+
+## 🛠️ **Phase 2: Extension Installation**
+
+### **Step 2.1: Install Core Extensions**
+```bash
+# Spec-Kit Workflow Extensions
+code --install-extension block.vscode-goose
+code --install-extension block.vscode-mcp-extension
+code --install-extension continue.continue
+code --install-extension google.gemini-cli-vscode-ide-companion
+code --install-extension google.geminicodeassist
+
+# AI & Coding Extensions
+code --install-extension github.copilot
+code --install-extension github.copilot-chat
+code --install-extension github.vscode-pull-request-github
+
+# Development Extensions
+code --install-extension vercel.turbo-vsc
+code --install-extension biomejs.biome
+code --install-extension bradlc.vscode-tailwindcss
+code --install-extension prisma.prisma
+code --install-extension ms-playwright.playwright
+code --install-extension docker.docker
+```
+
+### **Step 2.2: Install Workflow Extensions**
+```bash
+# Workflow Management
+code --install-extension specstory.specstory
+code --install-extension worktree.worktree
+code --install-extension alefragnani.project-manager
+code --install-extension mhutchie.git-graph
+
+# Testing & Quality
+code --install-extension hbenl.vscode-test-explorer
+code --install-extension orta.vscode-jest
+code --install-extension usernamehw.errorlens
+code --install-extension yoavbls.pretty-ts-errors
+
+# API & Documentation
+code --install-extension humao.rest-client
+code --install-extension echoapi.echoapi-for-vscode
+code --install-extension yzhang.markdown-all-in-one
+code --install-extension shd101wyy.markdown-preview-enhanced
+```
+
+### **Step 2.3: Install Utility Extensions**
+```bash
+# Productivity
+code --install-extension gruntfuggly.todo-tree
+code --install-extension christian-kohler.path-intellisense
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension dotenv.dotenv-vscode
+
+# Remote Development
+code --install-extension ms-vscode.powershell
+code --install-extension ms-vscode-remote.remote-containers
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+```
+
+## 📋 **Phase 3: Spec-Kit Integration**
+
+### **Step 3.1: Install Spec-Kit**
+```bash
+# Install spec-kit
+npm install @github/spec-kit
+
+# Initialize spec-kit
+npx spec-kit init
+
+# Verify installation
+npx spec-kit --version
+```
+
+### **Step 3.2: Create Spec Structure**
+```bash
+# Create directory structure
+mkdir -p specs
+mkdir -p templates
+mkdir -p .spec-workflow
+mkdir -p .spec-workflow/approvals
+mkdir -p .spec-workflow/tasks
+mkdir -p .spec-workflow/steering
+
+# Verify structure
+tree specs/
+tree templates/
+tree .spec-workflow/
+```
+
+### **Step 3.3: Setup Templates**
+```bash
+# Copy templates
+cp templates/spec-template.md specs/
+cp templates/plan-template.md specs/
+cp templates/tasks-template.md specs/
+cp templates/constitution.md specs/
+
+# Verify templates
+ls -la specs/
+ls -la templates/
+```
+
+### **Step 3.4: Configure Spec-Kit**
+```bash
+# Create spec-kit configuration
+cat > .spec-kit.json << EOF
+{
+  "workflow": "spec-kit",
+  "templates": "templates/",
+  "specs": "specs/",
+  "constitution": "templates/constitution.md"
+}
+EOF
+
+# Create MCP configuration
+cat > .mcp.json << EOF
+{
+  "servers": ["goose", "continue", "gemini"],
+  "context": "project-specific",
+  "autoConnect": true
+}
+EOF
+```
+
+## 🔧 **Phase 4: Tool Configuration**
+
+### **Step 4.1: Configure SpecStory**
+```bash
+# Create SpecStory configuration
+cat > .specstory.json << EOF
+{
+  "autoSave": true,
+  "format": "markdown",
+  "includeCode": true,
+  "includeContext": true,
+  "outputDir": "specs/conversations/"
+}
+EOF
+
+# Create output directory
+mkdir -p specs/conversations/
+```
+
+### **Step 4.2: Configure Worktree Extension**
+```bash
+# Create worktree configuration
+cat > .worktree.json << EOF
+{
+  "autoSwitch": true,
+  "showStatus": true,
+  "defaultBranch": "main",
+  "featurePrefix": "feature/"
+}
+EOF
+```
+
+### **Step 4.3: Configure Testing**
+```bash
+# Create testing configuration
+cat > .testing.json << EOF
+{
+  "framework": "playwright",
+  "autoRun": true,
+  "coverage": true,
+  "reportDir": "test-results/"
+}
+EOF
+
+# Create test results directory
+mkdir -p test-results/
+```
+
+### **Step 4.4: Configure API Integration**
+```bash
+# Create API configuration
+cat > .api.json << EOF
+{
+  "baseUrl": "http://localhost:3000",
+  "auth": "bearer",
+  "timeout": 30000,
+  "retries": 3
+}
+EOF
+```
+
+## 🧪 **Phase 5: Testing & Validation**
+
+### **Step 5.1: Test CLI Tools**
+```bash
+# Test all CLI tools
+vercel --version
+gh --version
+gcloud --version
+cursor --version
+bracel --version
+biome --version
+playwright --version
+
+# Test spec-kit
+npx spec-kit --help
+```
+
+### **Step 5.2: Test Extensions**
+```bash
+# List installed extensions
+code --list-extensions | grep -E "(goose|mcp|continue|gemini|copilot|vercel|biome|playwright|docker)"
+
+# Verify extension count (should be ~30)
+code --list-extensions | wc -l
+```
+
+### **Step 5.3: Test Environment**
+```bash
+# Test environment variables
+echo $GITHUB_TOKEN
+echo $VERCEL_TOKEN
+echo $GOOGLE_CLOUD_PROJECT
+echo $DATABASE_URL
+
+# Test API connections
+curl -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/user
+```
+
+### **Step 5.4: Test Workflow**
+```bash
+# Test spec-kit workflow
+npx spec-kit spec "Test specification creation"
+
+# Verify spec was created
+ls -la specs/
+
+# Test plan generation
+npx spec-kit plan "Test plan generation"
+
+# Verify plan was created
+ls -la specs/
+```
+
+## 🎯 **Phase 6: Final Verification**
+
+### **Step 6.1: Complete Environment Check**
+```bash
+# Run complete environment check
+./scripts/check-environment.sh
+
+# Expected output:
+# ✅ CLI Tools: All installed
+# ✅ Extensions: All active
+# ✅ Environment: All variables set
+# ✅ Spec-Kit: Working
+# ✅ MCP: Connected
+# ✅ Testing: Configured
+# ✅ API: Connected
+```
+
+### **Step 6.2: Workflow Test**
+```bash
+# Test complete workflow
+npx spec-kit spec "Build a test component"
+npx spec-kit plan "Create implementation plan"
+npx spec-kit tasks "Generate TDD tasks"
+
+# Verify all files created
+ls -la specs/
+ls -la .spec-workflow/
+```
+
+### **Step 6.3: Performance Check**
+```bash
+# Check startup time
+time code --version
+
+# Check memory usage
+ps aux | grep code
+
+# Check extension load time
+code --list-extensions | wc -l
+```
+
+## 🚀 **Phase 7: Ready for Development**
+
+### **Step 7.1: Create First Spec**
+```bash
+# Create your first specification
+npx spec-kit spec "Build a smart image component with user initials fallback"
+
+# This should trigger:
+# 1. SpecStory records the conversation
+# 2. Goose creates spec structure
+# 3. MCP provides context
+# 4. Worktree switches to feature branch
+# 5. Testing sets up test structure
+# 6. API documents endpoints
+```
+
+### **Step 7.2: Verify Workflow Integration**
+```bash
+# Check all tools are working together
+# 1. SpecStory should show conversation
+# 2. Goose should show spec structure
+# 3. MCP should show context
+# 4. Worktree should show branch status
+# 5. Testing should show test structure
+# 6. API should show endpoint documentation
+```
+
+### **Step 7.3: Team Onboarding**
+```bash
+# Share setup guide with team
+git add .
+git commit -m "Add complete setup guide"
+git push origin main
+
+# Create team documentation
+mkdir -p docs/
+cp PAINT_BY_NUMBERS_SETUP_GUIDE.mdx docs/
+```
+
+## 📊 **Success Metrics**
+
+### **Setup Completion Checklist:**
+- [ ] ✅ Repository cloned and worktrees created
+- [ ] ✅ All CLI tools installed and verified
+- [ ] ✅ Environment variables configured
+- [ ] ✅ All extensions installed (~30 total)
+- [ ] ✅ Spec-kit integrated and working
+- [ ] ✅ All tools configured and connected
+- [ ] ✅ Testing framework ready
+- [ ] ✅ API integration working
+- [ ] ✅ Workflow tested end-to-end
+- [ ] ✅ Team documentation created
+
+### **Performance Targets:**
+- **Startup Time**: <10 seconds
+- **Extension Count**: ~30 (down from 200+)
+- **Memory Usage**: <500MB
+- **Spec Creation**: <30 seconds
+- **Plan Generation**: <60 seconds
+- **Task Generation**: <90 seconds
+
+---
+
+*This paint-by-numbers guide ensures complete setup of the spec-kit workflow with all tools properly integrated and tested.*

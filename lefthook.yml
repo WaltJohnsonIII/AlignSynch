@@ -1,7 +1,7 @@
 pre-commit:
   jobs:
-    - run: pnpm dlx ultracite fix
-      glob: 
+    - run: pnpm dlx @biomejs/biome format --write
+      glob:
         - "*.js"
         - "*.jsx"
         - "*.ts"
@@ -9,4 +9,13 @@ pre-commit:
         - "*.json"
         - "*.jsonc"
         - "*.css"
+      exclude: ".next/**"
+      stage_fixed: true
+    - run: pnpm dlx @biomejs/biome lint --apply
+      glob:
+        - "*.js"
+        - "*.jsx"
+        - "*.ts"
+        - "*.tsx"
+      exclude: ".next/**"
       stage_fixed: true

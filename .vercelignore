@@ -1,0 +1,48 @@
+# Development files - exclude from Vercel deployment
+dev/
+.spec-workflow/
+.specstory/
+alignsynch/
+obsidian-vault/
+archive/
+
+# Large binaries and installers
+*.zip
+*.exe
+*.dll
+*.pak
+*.bin
+*.dat
+*.html
+*.vsix
+
+# Development documentation
+*.md
+!README.md
+!CHANGELOG.md
+
+# Test files
+__tests__/
+__checks__/
+test-*.js
+*.test.tsx
+*.test.ts
+test-results/
+playwright-report/
+
+# Development scripts
+scripts/
+templates/
+specs/
+src/cli/
+
+# Development configs
+docker-compose.dev.yml
+jest.config.js
+jest.setup.ts
+lefthook.yml
+
+# Temporary files
+*.tmp
+*.log
+desktop.ini

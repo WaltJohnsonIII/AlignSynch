@@ -56,3 +56,49 @@ onlook_chat.md
 /.rules
 /.clinerules
 .env*.local
+
+# Development tools and applications (should not be deployed)
+/dev/
+/obsidian-vault/
+/.specstory/
+/specs/
+/templates/
+/scripts/
+/memory/
+/data/Untitled-*.md
+/data/as_prd_*.mdx
+
+# AI tool directories
+/.gemini/
+/.claude/
+/.augment/
+/.kiro/
+/.kilocode/
+/.junie/
+/.idx/
+/.windsurf/
+/.openhands/
+/.zed/
+/.agentic-tools-mcp/
+
+# Development workflow
+/.spec-workflow/
+/archive/
+/test-results/
+/playwright-report/
+
+# Build artifacts
+/.next/
+/out/
+/build/
+/dist/
+
+# Test files that shouldn't be deployed
+/__tests__/
+/__checks__/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+utils.test.ts
+smart-image.test.tsx

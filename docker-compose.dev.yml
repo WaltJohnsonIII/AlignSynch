@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  # Main development environment
+  alignsynch:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/workspace
+      - /workspace/node_modules
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@db:5432/alignsynch
+    depends_on:
+      - db
+      - redis
+    networks:
+      - alignsynch-network
+
+  # Database
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: alignsynch
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - alignsynch-network
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - alignsynch-network
+
+  # Ollama for local AI models
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - alignsynch-network
+
+  # Goose CLI service
+  goose:
+    build:
+      context: .
+      dockerfile: Dockerfile.goose
+    volumes:
+      - .:/workspace
+    environment:
+      - GOOSE_PROVIDER=cursor-agent
+      - CURSOR_AGENT_COMMAND=cursor-agent
+    networks:
+      - alignsynch-network
+
+volumes:
+  postgres_data:
+  ollama_data:
+
+networks:
+  alignsynch-network:
+    driver: bridge

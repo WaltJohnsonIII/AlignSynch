@@ -11,7 +11,7 @@ pre-commit:
         - "*.css"
       exclude: ".next/**"
       stage_fixed: true
-    - run: pnpm dlx @biomejs/biome lint --apply
+    - run: pnpm dlx @biomejs/biome lint --write
       glob:
         - "*.js"
         - "*.jsx"

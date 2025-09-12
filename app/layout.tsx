@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
 import type React from "react";
-import { Suspense } from "react";
 import { Toaster } from "sonner";
 import { SidebarProvider } from "@/components/layout/sidebar-context";
-import {
-  PostHogPageview,
-  PostHogProvider,
-} from "@/components/providers/posthog-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 import Script from "next/script";
-import { SpecKitBanner } from "@/components/posthog/spec-kit-banner";
+// import { SpecKitBanner } from "@/components/posthog/spec-kit-banner";
 import { inter } from "./fonts";
 export const metadata: Metadata = {
   title: "Quiz Making Website - Play & Earn Money",
@@ -28,7 +23,7 @@ export default function RootLayout({
       </Suspense>
       <PostHogProvider> */}
       <body className="" data-oid="eui5ee-">
-        <SpecKitBanner />
+        {/* <SpecKitBanner /> */}
         <ThemeProvider
           attribute="class"
           data-oid="u29m1rv"

@@ -182,6 +182,7 @@ export default function AuthPage() {
             <div className="text-center text-sm" data-oid="oqhlxc1">
               {"Don't have an account? "}
               <button
+                type="button"
                 className="text-indigo-600"
                 data-oid="f9vzyr_"
                 onClick={() => router.push("/register")}

@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
+    "dev:live": "powershell -ExecutionPolicy Bypass -File ./dev-with-live-server.ps1",
+    "dev:open": "powershell -ExecutionPolicy Bypass -File ./dev-auto-open.ps1",
     "build": "next build",
     "build:analyze": "ANALYZE=true next build --no-open",
     "start": "next start",

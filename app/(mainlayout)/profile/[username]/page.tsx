@@ -254,9 +254,7 @@ const user: User = {
     },
   ],
 };
-export async function generateMetadata({
-  params,
-}: ProfilePageProps): Promise<Metadata> {
+export function generateMetadata({ params }: ProfilePageProps): Metadata {
   if (!user) {
     return {
       title: "User Not Found | QuizHub",
@@ -270,6 +268,6 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProfilePage() {
+export default function ProfilePage() {
   return <UserProfile data-oid="xk_ajfu" user={user} />;
 }

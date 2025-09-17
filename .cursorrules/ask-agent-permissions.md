@@ -1,3 +1,9 @@
+---
+description: Ask Agent - Environment Management & Installation Agent
+activationType: explicit
+triggerConditions: ["installation-requested", "environment-setup-needed", "package-management-required"]
+---
+
 # Ask Agent - Environment Management & Installation Agent
 
 ## Core Purpose

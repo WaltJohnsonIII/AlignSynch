@@ -1,3 +1,9 @@
+---
+description: Cursor Agent Restrictions
+activationType: always
+triggerConditions: ["all-conversations"]
+---
+
 # Cursor Agent Restrictions
 
 ## Core Principle

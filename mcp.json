@@ -1,0 +1,65 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+      "env": {
+        "ALLOWED_DIRECTORIES": "./alignsynch-dev"
+      }
+    },
+    "git": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"],
+      "env": {
+        "GIT_REPO_PATH": "."
+      }
+    },
+    "vscode": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@vscode-mcp/vscode-mcp-server"],
+      "env": {
+        "VSCODE_WORKSPACE": "./alignsynch-dev"
+      }
+    },
+    "gemini": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "gemini-mcp-tool"],
+      "env": {
+        "GEMINI_API_KEY": "$GEMINI_API_KEY"
+      }
+    },
+    "diagnostics": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "newbpydev.mcp-diagnostics-extension"],
+      "env": {}
+    },
+    "language-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@alexwohletz/language-server-mcp"],
+      "env": {}
+    },
+    "codex-keeper": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@aindreyway/mcp-codex-keeper@latest"],
+      "env": {
+        "npm_config_cache_max": "1024000000",
+        "NODE_OPTIONS": "--max-old-space-size=256"
+      }
+    },
+    "linear": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
+      "env": {
+        "LINEAR_API_KEY": "$LINEAR_API_KEY"
+      }
+    }
+  }
+}

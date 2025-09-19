@@ -49,6 +49,10 @@ Comprehensive specification for replacing all placeholder images in the AlignSyn
 - Quick, comprehensive replacement with future upgradeability
 - Focus on visual quality and proper functionality
 - Ensure images load correctly across all components
+<<<<<<< HEAD
 - Maintain system integrity while improving visual appeal
 
 @cursor Please create a Linear issue for this specification and initiate the specify workflow using the subagent functionality.
+=======
+- Maintain system integrity while improving visual appeal
+>>>>>>> b73df22 (feat: organize repository structure and add specify workflow)

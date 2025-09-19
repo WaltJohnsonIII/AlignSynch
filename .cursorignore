@@ -1,1 +1,19 @@
 # Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+
+# Exclude from SpecKit context - .NET/SpecFlow related (not used in this project)
+*.cs
+*.csproj
+*.sln
+*.vb
+*.vbproj
+
+# Exclude from SpecKit context - CopilotKit (can be removed from context)
+**/copilotkit/**
+**/copilotkit-*
+
+# Exclude from SpecKit context - WorkOS (can be removed from context)  
+**/workos/**
+**/workos-*
+
+# Keep in context: Checkly, Docker, PostHog, and all AlignSynch features
+# (Quiz, Battle, Tournaments, Leaderboards, Affiliate, User profiles, etc.)

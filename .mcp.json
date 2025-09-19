@@ -1,0 +1,1 @@
+{"servers": ["claude", "gemini", "copilot", "cursor"], "context": "project-specific", "autoConnect": true}

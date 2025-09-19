@@ -9,7 +9,11 @@
     "build": "next build",
     "build:analyze": "ANALYZE=true next build --no-open",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "spec:gen": "node scripts/generate-spec.mjs spec",
+    "plan:gen": "node scripts/generate-spec.mjs plan",
+    "tasks:gen": "node scripts/generate-spec.mjs tasks",
+    "spec:sample": "node scripts/generate-spec.mjs spec \"Sample Spec\" \"Automation\""
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",

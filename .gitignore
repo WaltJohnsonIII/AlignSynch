@@ -101,4 +101,4 @@ onlook_chat.md
 *.spec.ts
 *.spec.tsx
 utils.test.ts
-smart-image.test.tsx
+smart-image.test.tsxspecs/conversations/

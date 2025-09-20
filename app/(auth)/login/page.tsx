@@ -4,6 +4,7 @@ import { BookOpen, Trophy } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { APP_NAME } from "@/lib/app-config";
 import {
   Card,
   CardContent,
@@ -38,7 +39,7 @@ export default function AuthPage() {
               <BookOpen className="h-10 w-10 text-white" data-oid="vnlns:x" />
             </div>
             <h2 className="mb-4 font-bold text-4xl" data-oid="_vu37kn">
-              Welcome to QuizHub
+              {`Welcome to ${APP_NAME}`}
             </h2>
             <p
               className="text-white/90 text-xl leading-relaxed"

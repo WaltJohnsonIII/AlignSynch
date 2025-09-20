@@ -129,3 +129,13 @@ Status: Active
 **Status: Ready for agent delegation and first feature flag creation!**
 
 **Next Action: Create testing framework feature flag and delegate tasks to agent team.**
+
+## Media Overhaul Guidance
+
+- We now ship a `SmartImage` component (`components/ui/smart-image.tsx`) that renders deterministic gradient placeholders when images are missing or broken. Controlled by PostHog feature flag `smart-image-replacement` (defaults ON if PostHog unavailable).
+- Avatars (`components/ui/avatar.tsx`) now include gradient initial fallbacks; pass `name` to `AvatarFallback` for deterministic colors.
+- A gradient SVG API is available at `/api/gradient?seed=John+Doe&width=200&height=200`.
+- WordPress-like media structure: place assets under `public/media/YYYY/MM/`.
+- Generate `public/media.manifest.json` with `pnpm media:manifest`.
+- App name branding can be changed via `NEXT_PUBLIC_APP_NAME`; see `lib/app-config.ts`.
+- A codemod script exists at `scripts/codemods/replace-image-placeholders.ts` to normalize placeholder usage.

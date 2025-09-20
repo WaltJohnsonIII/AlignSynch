@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { useState } from "react";
 import { useFeatureFlag } from "@/hooks/use-feature-flag";
 import { cn, getInitials } from "@/lib/utils";
 
 interface SmartImageProps {
-  src?: string | null;
+  src?: string | StaticImageData | null;
   alt: string;
   name?: string;
   type?: "avatar" | "generic";
@@ -61,7 +61,7 @@ export function SmartImage({
       className={className}
       height={height}
       onError={() => setImageError(true)}
-      src={src || "/placeholder.png"}
+      src={src || "/placeholder.svg"}
       width={width}
       {...props}
     />

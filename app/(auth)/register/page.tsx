@@ -13,6 +13,7 @@ import {
   Trophy,
   Users,
 } from "lucide-react";
+import { APP_NAME } from "@/lib/app-config";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -221,7 +222,7 @@ export default function AuthPage() {
               <BookOpen className="h-8 w-8 text-white" data-oid="ldw6pne" />
             </div>
             <h1 className="mb-2 font-bold text-3xl" data-oid="9.r-uv9">
-              Join QuizHub
+              {`Join ${APP_NAME}`}
             </h1>
             <p data-oid="i-7hqmj">
               Create your account and start your quiz adventure

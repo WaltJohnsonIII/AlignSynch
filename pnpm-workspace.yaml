@@ -6,3 +6,6 @@ onlyBuiltDependencies:
   - lefthook
   - sharp
   - yarn
+
+packages:
+  - .

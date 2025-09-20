@@ -9,7 +9,8 @@
     "build": "next build",
     "build:analyze": "ANALYZE=true next build --no-open",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "media:manifest": "tsx scripts/generate-media-manifest.ts"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",

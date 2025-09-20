@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { getAppName } from "@/lib/config";
 
 export function Footer() {
   return (
@@ -48,7 +49,7 @@ export function Footer() {
                 className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text font-bold text-2xl text-transparent"
                 data-oid="kmw643e"
               >
-                QuizHub
+                {getAppName()}
               </span>
             </div>
             <p
@@ -444,7 +445,7 @@ export function Footer() {
               className="text-slate-500 dark:text-slate-400"
               data-oid="rk3.4eh"
             >
-              © {new Date().getFullYear()} QuizHub . All rights reserved.
+              © {new Date().getFullYear()} {getAppName()} . All rights reserved.
             </p>
             <div
               className="mt-4 flex flex-wrap justify-center gap-6 md:mt-0"

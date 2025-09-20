@@ -1,5 +1,6 @@
 import { Crown, Medal, Star } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallback } from "@/components/ui/avatar";
+import { UserAvatar } from "@/components/ui/user-avatar";
 import { Badge } from "@/components/ui/badge";
 export type LeaderboardItem = {
   id: number;
@@ -44,21 +45,17 @@ export function LeaderboardPodium({ leaderboardData }: LeaderboardPodiumProps) {
               key={user.id}
             >
               <div className="relative mb-2" data-oid="9pdzqln">
-                <Avatar
-                  className={`${avatarSizes[i]} ring-2 ring-offset-2 ${borderColors[i]}`}
+                <div
+                  className={`${avatarSizes[i]} ring-2 ring-offset-2 ${borderColors[i]} rounded-full`}
                   data-oid="06f-0qn"
                 >
-                  <AvatarImage
-                    alt={user.name}
+                  <UserAvatar
                     className="object-cover object-center"
-                    data-oid="s9fac4k"
-                    src={user.avatar || "/placeholder.svg"}
+                    name={user.name}
+                    size={i === 0 ? 64 : i === 1 ? 96 : 56}
+                    src={user.avatar || null}
                   />
-
-                  <AvatarFallback data-oid="y.2gtc:">
-                    {user.name.substring(0, 2)}
-                  </AvatarFallback>
-                </Avatar>
+                </div>
                 {i === 1 && (
                   <div
                     className="-top-6 -translate-x-1/2 absolute left-1/2"

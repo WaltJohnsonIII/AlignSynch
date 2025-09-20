@@ -1,4 +1,6 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { UserAvatar } from "@/components/ui/user-avatar";
+import type React from "react";
 import { X } from "lucide-react";
 import Link from "next/link";
 import { recentMessages } from "@/data/chat-data";
@@ -59,13 +61,7 @@ const ChatDrawer = ({
           >
             <div className="relative" data-oid="v25e9cd">
               <Avatar className="size-10" data-oid="qh.d4vr">
-                <AvatarImage
-                  alt={message.sender}
-                  className="size-10 rounded-full object-cover object-center"
-                  data-oid=".zyx0r:"
-                  src={message.avatar || "/placeholder.svg"}
-                />
-
+                <UserAvatar name={message.sender} size={40} src={message.avatar || null} />
                 <AvatarFallback data-oid="p5w-npv">
                   {message.sender.charAt(0)}
                 </AvatarFallback>

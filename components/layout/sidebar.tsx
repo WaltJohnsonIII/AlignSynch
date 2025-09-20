@@ -23,6 +23,7 @@ import { usePathname } from "next/navigation";
 import type React from "react";
 import { useWindowSize } from "@/hooks/use-window";
 import { cn } from "@/lib/utils";
+import { getAppName } from "@/lib/config";
 import { useSidebar } from "./sidebar-context";
 
 export function AppSidebar() {
@@ -54,7 +55,7 @@ export function AppSidebar() {
           <BookOpen className="h-6 w-6 text-primary" data-oid="4snbtjo" />
           {!collapsed && (
             <span className="font-bold text-xl" data-oid="2-p8j.p">
-              QuizHub
+              {getAppName()}
             </span>
           )}
         </Link>

@@ -5,6 +5,8 @@ Describe the change and why it’s needed.
 - PRD: <url>
 - Linear: <url>
 
+> Apply the `needs-architect-review` label to trigger MAX governance.
+
 ## Verification & Validation
 - [ ] Lint passes (Biome/ESLint)
 - [ ] Typecheck passes

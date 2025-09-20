@@ -82,23 +82,26 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.2",
     "@next/bundle-analyzer": "^15.5.3",
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.18.1",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
+    "@eslint/eslintrc": "^3.2.0",
     "checkly": "latest",
     "drizzle-kit": "^0.31.4",
+    "eslint": "^9.19.0",
+    "eslint-config-next": "15.5.2",
     "husky": "^9.1.7",
+    "jest": "^29.7.0",
     "jiti": "^2.5.1",
     "lefthook": "^1.12.3",
     "lint-staged": "^16.1.6",
     "postcss": "^8.5.6",
     "tailwindcss": "3.4.17",
+    "ts-jest": "^29.2.5",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
-    "ultracite": "5.3.3",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.2.5",
-    "@types/jest": "^29.5.14"
+    "ultracite": "5.3.3"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [

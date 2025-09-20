@@ -19,6 +19,7 @@ import type React from "react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { SmartImage } from "@/components/ui/smart-image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -124,10 +125,9 @@ export function NewsArticle({ slug }: { slug: string }) {
               <AvatarImage
                 alt={article.author.name}
                 data-oid="--bqplu"
-                src={article.author.avatar || "/wizard.png"}
+                src={article.author.avatar || undefined}
               />
-
-              <AvatarFallback data-oid="53j-w0c">
+              <AvatarFallback data-oid="53j-w0c" name={article.author.name}>
                 {article.author.name.charAt(0)}
               </AvatarFallback>
             </Avatar>
@@ -213,12 +213,14 @@ export function NewsArticle({ slug }: { slug: string }) {
         className="relative mb-8 h-[300px] w-full overflow-hidden rounded-lg md:h-[400px]"
         data-oid="bi0bxaw"
       >
-        <Image
+        <SmartImage
           alt={article.title}
           className="object-cover"
           data-oid="bjkyp5u"
           fill
-          src={article.coverImage || "/placeholder.svg"}
+          src={article.coverImage || undefined}
+          width={1200}
+          height={400}
         />
       </div>
 
@@ -259,12 +261,14 @@ export function NewsArticle({ slug }: { slug: string }) {
                       className="relative my-6 h-[250px] w-full overflow-hidden rounded-lg"
                       data-oid="oz78y91"
                     >
-                      <Image
+                      <SmartImage
                         alt={section.imageAlt || "Article image"}
                         className="object-cover"
                         data-oid="05bxecj"
                         fill
-                        src={section.image || "/placeholder.svg"}
+                        src={section.image || undefined}
+                        width={800}
+                        height={250}
                       />
 
                       {section.imageCaption && (
@@ -579,12 +583,14 @@ export function NewsArticle({ slug }: { slug: string }) {
                 <Card data-oid="q3mvu0v" key={related.slug}>
                   <div className="flex" data-oid="wwhxcsk">
                     <div className="relative h-24 w-24" data-oid=".cjefi0">
-                      <Image
+                      <SmartImage
                         alt={related.title}
                         className="object-cover"
                         data-oid="phqj__s"
                         fill
-                        src={related.coverImage || "/placeholder.svg"}
+                        src={related.coverImage || undefined}
+                        width={96}
+                        height={96}
                       />
                     </div>
                     <div className="flex-1 p-3" data-oid="okpc6jv">

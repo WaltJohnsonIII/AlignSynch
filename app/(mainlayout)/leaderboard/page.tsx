@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { LeaderboardPage } from "@/components/leaderboard/leaderboard-page";
+import { withBrand } from "@/lib/app-config";
 
 export const metadata: Metadata = {
-  title: "Leaderboard | QuizHub",
+  title: withBrand("Leaderboard"),
   description: "See who's leading the pack in our global quiz rankings.",
 };
 

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { BattlePage } from "@/components/battle/battle-page";
+import { withBrand } from "@/lib/app-config";
 
 export const metadata: Metadata = {
-  title: "Quiz Battle | QuizHub",
+  title: withBrand("Quiz Battle"),
   description: "Challenge friends or random players to real-time quiz battles",
 };
 

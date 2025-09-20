@@ -18,6 +18,7 @@ import {
   Users,
 } from "lucide-react";
 import Image from "next/image";
+import { SmartImage } from "@/components/ui/smart-image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -616,12 +617,14 @@ export function ProfileCreatedQuizzes({ user }: ProfileCreatedQuizzesProps) {
           {previewQuiz && (
             <div className="max-h-[70vh] overflow-y-auto" data-oid="i_nrazo">
               <div className="relative aspect-video w-full" data-oid="yrl:le_">
-                <Image
+                <SmartImage
                   alt={previewQuiz.title}
                   className="rounded-md object-cover"
                   data-oid="k.syief"
                   fill
-                  src={previewQuiz.image || "/placeholder.svg"}
+                  src={previewQuiz.image || undefined}
+                  width={800}
+                  height={450}
                 />
               </div>
 
@@ -881,13 +884,13 @@ function QuizCard({
       data-oid="1y0bzfp"
     >
       <div className="relative aspect-video" data-oid="6dxp8l1">
-        <Image
+        <SmartImage
           alt={quiz.title}
           className="object-cover"
           data-oid="24h27uo"
           fill
           height={350}
-          src={quiz.image || "/placeholder.svg"}
+          src={quiz.image || undefined}
           width={600}
         />
 
@@ -1087,13 +1090,13 @@ function QuizListItem({
           className="relative h-40 w-full sm:h-auto sm:w-48"
           data-oid=".bum7pu"
         >
-          <Image
+          <SmartImage
             alt={quiz.title}
             className="object-cover sm:rounded-l-lg"
             data-oid="yq64sam"
             fill
             height={350}
-            src={quiz.image || "/placeholder.svg"}
+            src={quiz.image || undefined}
             width={600}
           />
 

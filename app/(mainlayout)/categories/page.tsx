@@ -1,7 +1,8 @@
 import { CategoriesPage } from "@/components/categories/categories-page";
+import { withBrand } from "@/lib/app-config";
 
 export const metadata = {
-  title: "Quiz Categories | QuizHub",
+  title: withBrand("Quiz Categories"),
   description:
     "Browse all quiz categories and find quizzes that match your interests.",
 };

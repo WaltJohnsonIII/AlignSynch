@@ -1,6 +1,7 @@
 "use client";
 import { Calendar, ChevronRight, Clock, Filter, Search } from "lucide-react";
 import Image from "next/image";
+import { SmartImage } from "@/components/ui/smart-image";
 import Link from "next/link";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -93,12 +94,14 @@ export function NewsPage() {
                   className="relative h-44 w-full xl:h-60"
                   data-oid="dxvteww"
                 >
-                  <Image
+                  <SmartImage
                     alt={article.title}
                     className="aspect-video object-cover"
                     data-oid="4ew224n"
                     fill
-                    src={article.coverImage || "/placeholder.svg"}
+                    src={article.coverImage || undefined}
+                    width={800}
+                    height={240}
                   />
 
                   <div className="absolute top-2 right-2" data-oid="j8p:4c7">
@@ -211,12 +214,14 @@ export function NewsPage() {
                   className="relative h-44 w-full xl:h-60"
                   data-oid="zsdcpe-"
                 >
-                  <Image
+                  <SmartImage
                     alt={article.title}
                     className="object-cover"
                     data-oid="_zdqd18"
                     fill
-                    src={article.coverImage || "/placeholder.svg"}
+                    src={article.coverImage || undefined}
+                    width={800}
+                    height={240}
                   />
                 </div>
                 <CardHeader className="p-4" data-oid="ctomgop">

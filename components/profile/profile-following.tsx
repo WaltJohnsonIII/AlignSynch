@@ -68,10 +68,9 @@ export function ProfileFollowing({ userId }: ProfileFollowingProps) {
                   <AvatarImage
                     alt={user.name}
                     data-oid="rqelnsn"
-                    src={user.avatar || "/placeholder.svg"}
+                    src={user.avatar || undefined}
                   />
-
-                  <AvatarFallback data-oid="75m1ucp">
+                  <AvatarFallback data-oid="75m1ucp" name={user.name}>
                     {user.name.substring(0, 2)}
                   </AvatarFallback>
                 </Avatar>

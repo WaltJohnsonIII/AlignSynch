@@ -80,10 +80,9 @@ export function ProfileFollowers({ userId }: ProfileFollowersProps) {
                   <AvatarImage
                     alt={follower.name}
                     data-oid="mhoiqc8"
-                    src={follower.avatar || "/placeholder.svg"}
+                    src={follower.avatar || undefined}
                   />
-
-                  <AvatarFallback data-oid="dah_w2w">
+                  <AvatarFallback data-oid="dah_w2w" name={follower.name}>
                     {follower.name.substring(0, 2)}
                   </AvatarFallback>
                 </Avatar>

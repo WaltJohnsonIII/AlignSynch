@@ -57,10 +57,9 @@ export function MessageModal({
               <AvatarImage
                 alt={recipient.name}
                 data-oid="idk6ki4"
-                src={recipient.avatar || "/placeholder.svg"}
+                src={recipient.avatar || undefined}
               />
-
-              <AvatarFallback data-oid="byl3hpp">
+              <AvatarFallback data-oid="byl3hpp" name={recipient.name}>
                 {recipient.name.substring(0, 2)}
               </AvatarFallback>
             </Avatar>
@@ -108,10 +107,9 @@ export function MessageModal({
                   <AvatarImage
                     alt={recipient.name}
                     data-oid=":zpmqk1"
-                    src={recipient.avatar || "/placeholder.svg"}
+                    src={recipient.avatar || undefined}
                   />
-
-                  <AvatarFallback data-oid="j_a7k2n">
+                  <AvatarFallback data-oid="j_a7k2n" name={recipient.name}>
                     {recipient.name.substring(0, 2)}
                   </AvatarFallback>
                 </Avatar>

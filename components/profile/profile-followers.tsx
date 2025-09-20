@@ -3,7 +3,7 @@
 import { UserCheck, UserPlus, Users } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { UserAvatar } from "@/components/ui/user-avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -76,17 +76,7 @@ export function ProfileFollowers({ userId }: ProfileFollowersProps) {
               key={follower.id}
             >
               <div className="flex items-center gap-3" data-oid="15d4qcu">
-                <Avatar data-oid="892t1cv">
-                  <AvatarImage
-                    alt={follower.name}
-                    data-oid="mhoiqc8"
-                    src={follower.avatar || "/placeholder.svg"}
-                  />
-
-                  <AvatarFallback data-oid="dah_w2w">
-                    {follower.name.substring(0, 2)}
-                  </AvatarFallback>
-                </Avatar>
+                <UserAvatar className="size-10" name={follower.name} src={follower.avatar || null} />
                 <div data-oid="jue-2d1">
                   <Link
                     className="font-medium hover:underline"

@@ -8,8 +8,9 @@ import "./globals.css";
 import Script from "next/script";
 // import { SpecKitBanner } from "@/components/posthog/spec-kit-banner";
 import { inter } from "./fonts";
+import { getAppName } from "@/lib/config";
 export const metadata: Metadata = {
-  title: "Quiz Making Website - Play & Earn Money",
+  title: `${getAppName()} - Play & Earn Money` as unknown as string,
   description:
     "Create quizzes, play games, and earn money with our multi-vendor quiz platform",
 };

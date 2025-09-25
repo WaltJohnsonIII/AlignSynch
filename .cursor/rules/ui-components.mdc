@@ -1,0 +1,30 @@
+---
+globs: components/**/*.tsx,components/**/*.ts
+description: "UI component patterns and ShadCN integration"
+---
+
+# UI Component Patterns
+
+## ShadCN UI Integration
+- Use ShadCN UI components as base
+- Extend components when needed
+- Follow ShadCN design patterns
+- Maintain consistent styling
+
+## Component Structure
+- Create focused, reusable components
+- Use proper TypeScript props
+- Implement proper error boundaries
+- Follow single responsibility principle
+
+## Styling Guidelines
+- Use Tailwind CSS classes
+- Implement responsive design
+- Use CSS variables for theming
+- Follow design system patterns
+
+## Accessibility
+- Implement proper ARIA attributes
+- Use semantic HTML elements
+- Ensure keyboard navigation
+- Test with screen readers

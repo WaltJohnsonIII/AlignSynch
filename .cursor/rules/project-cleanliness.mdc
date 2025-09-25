@@ -1,0 +1,44 @@
+---
+alwaysApply: true
+description: "Prevent bloat and maintain professional Next.js project structure"
+---
+
+# Project Cleanliness & Architecture
+
+## Root Directory Protection
+- **NEVER** create files in root directory except for standard Next.js files
+- **NEVER** create agent-generated documentation in root
+- **NEVER** create workflow directories (`.specify/`, `.agentic/`, `.cursor/` custom)
+- **NEVER** create template or example files in root
+- **NEVER** create large asset files in root or public/
+
+## Allowed Root Files Only
+- `package.json`, `pnpm-lock.yaml`
+- `next.config.js`, `tailwind.config.js`, `tsconfig.json`
+- `biome.jsonc`, `jest.setup.ts`
+- `.gitignore`, `.vercelignore`, `.cursorindexingignore`
+- `env.local.template`
+- `README.md` (project documentation only)
+
+## Directory Structure Rules
+- All custom code goes in `app/`, `components/`, `lib/`
+- Documentation goes in `docs/` (ignored by git)
+- Assets go in `public/` (images, icons only)
+- No temporary or generated files in root
+- No agent conversation exports in root
+- No workflow templates in root
+
+## File Generation Guidelines
+- Generate files in appropriate directories only
+- Use standard Next.js 15 App Router structure
+- Follow professional project conventions
+- Keep root directory minimal and clean
+- Archive any bloat to `docs/dev/archive/`
+
+## Bloat Prevention
+- No Cursor-generated workflow files
+- No agent conversation exports
+- No template documentation
+- No large asset files
+- No temporary directories
+- No custom tooling directories

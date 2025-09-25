@@ -1,0 +1,30 @@
+---
+globs: app/**/*.tsx,app/**/*.ts,components/**/*.tsx
+description: "Next.js 15 App Router patterns and conventions"
+---
+
+# Next.js 15 App Router Patterns
+
+## App Router Structure
+- Use `app/` directory for all routes
+- Implement proper layouts with [app/layout.tsx](mdc:app/layout.tsx)
+- Use route groups for organization
+- Implement loading and error boundaries
+
+## Server Components (Default)
+- Use Server Components by default
+- Access database directly in Server Components
+- Use async/await for data fetching
+- Implement proper error handling
+
+## Client Components
+- Add `"use client"` directive when needed
+- Use for interactive features
+- Implement proper state management
+- Use React hooks appropriately
+
+## Data Fetching
+- Use Server Actions for mutations
+- Implement proper caching strategies
+- Use Next.js built-in caching
+- Handle loading and error states

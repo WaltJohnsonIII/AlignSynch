@@ -1,0 +1,29 @@
+---
+globs: *.ts,*.tsx,*.js,*.jsx
+description: "Coding standards and best practices"
+---
+
+# Coding Standards
+
+## TypeScript Guidelines
+- Always use TypeScript for new files
+- Define proper interfaces and types
+- Use strict type checking
+- Prefer `type` over `interface` for consistency
+
+## React 19 Patterns
+- Use function components with hooks
+- Implement proper error boundaries
+- Use React 19 features like `use` hook when appropriate
+- Follow Next.js 15 App Router patterns
+
+## Styling
+- Use Tailwind CSS for all styling
+- Prefer ShadCN UI components over custom ones
+- Use CSS modules only when necessary
+- Follow responsive design principles
+
+## File Naming
+- Use kebab-case for files: `user-profile.tsx`
+- Use PascalCase for components: `UserProfile`
+- Use camelCase for functions and variables

@@ -1,0 +1,30 @@
+---
+globs: lib/db/**/*.ts,lib/**/*schema*.ts
+description: "Database patterns with Drizzle ORM"
+---
+
+# Database Patterns with Drizzle ORM
+
+## Schema Definition
+- Define schemas in [lib/db/schema.ts](mdc:lib/db/schema.ts)
+- Use proper PostgreSQL types
+- Implement relationships correctly
+- Use enums for status fields
+
+## Migration Patterns
+- Create migrations in `lib/db/migrations/`
+- Use descriptive migration names
+- Test migrations before applying
+- Document schema changes
+
+## Query Patterns
+- Use Drizzle query builder
+- Implement proper error handling
+- Use transactions for complex operations
+- Optimize queries for performance
+
+## Type Safety
+- Export types from schema files
+- Use proper TypeScript inference
+- Implement runtime validation
+- Handle database errors gracefully

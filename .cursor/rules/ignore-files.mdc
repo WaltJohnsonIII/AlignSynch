@@ -1,0 +1,33 @@
+---
+globs: .gitignore,.vercelignore,.cursorindexingignore
+description: "Ignore file management and bloat prevention"
+---
+
+# Ignore File Management
+
+## Critical Ignore Patterns
+- `/docs/` - All documentation (reference only)
+- `/data/documentation/` - Template documentation
+- `node_modules/`, `dist/`, `build/`
+- `*.min.js`, `*.min.css` - Minified files
+- `.env.local`, `.env.*.local`
+
+## Bloat Prevention Patterns
+- `/dev/` - Development artifacts
+- `/.specify/` - Workflow templates
+- `/.agentic/` - Agent-generated files
+- `/.cursorrules/` - Custom Cursor configs
+- `/archive/` - Archived content
+- `cursor_project_status_and_next_steps.md`
+
+## File Size Limits
+- Ignore files > 1MB in assets
+- Ignore video files in documentation
+- Ignore large template files
+- Ignore generated documentation
+
+## Always Require Secondary Approval
+- **NEVER** modify ignore files without explicit user approval
+- **ALWAYS** ask for confirmation before changing ignore patterns
+- **ALWAYS** explain why ignore changes are needed
+- **NEVER** override this requirement

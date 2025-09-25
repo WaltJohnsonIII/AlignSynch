@@ -1,0 +1,29 @@
+---
+alwaysApply: true
+description: "Project structure and tech stack overview"
+---
+
+# AlignSynch Project Structure
+
+## Tech Stack
+- **Next.js 15** with App Router
+- **React 19** with latest features
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **ShadCN UI** components
+- **Drizzle ORM** for database
+- **PostgreSQL** database
+- **BetterAuth** for authentication
+
+## Key Directories
+- `app/` - Next.js App Router pages and layouts
+- `components/` - Reusable React components
+- `lib/` - Utility functions and configurations
+- `public/` - Static assets
+- `styles/` - Global CSS styles
+
+## Entry Points
+- Main app entry: [app/layout.tsx](mdc:app/layout.tsx)
+- Root layout: [app/page.tsx](mdc:app/page.tsx)
+- Database schema: [lib/db/schema.ts](mdc:lib/db/schema.ts)
+- Environment config: [env.local.template](mdc:env.local.template)

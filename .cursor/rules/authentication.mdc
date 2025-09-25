@@ -1,0 +1,30 @@
+---
+globs: components/auth/**/*.tsx,lib/auth/**/*.ts,app/auth/**/*.tsx
+description: "Authentication patterns and security"
+---
+
+# Authentication Patterns
+
+## BetterAuth Integration
+- Use BetterAuth for authentication
+- Implement proper session management
+- Handle authentication state correctly
+- Use server-side authentication checks
+
+## Security Best Practices
+- Validate all user inputs
+- Implement proper CSRF protection
+- Use secure session management
+- Handle authentication errors gracefully
+
+## Component Patterns
+- Create reusable auth components
+- Implement proper loading states
+- Handle authentication redirects
+- Use proper TypeScript types for auth state
+
+## API Security
+- Protect API routes with authentication
+- Implement proper authorization checks
+- Use middleware for auth validation
+- Handle token refresh properly

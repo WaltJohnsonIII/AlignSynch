@@ -48,7 +48,8 @@ onlook_chat.md
 
 # IDE and tool-specific
 .vscode/
-.cursor/
+.cursor/*
+!.cursor/rules/
 .kombai/
 .repomix/
 *.code-workspace

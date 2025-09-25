@@ -10,10 +10,9 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 
-// Users table with WorkOS integration
+// Users table
 export const users = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
-  workosId: varchar("workos_id", { length: 255 }).unique().notNull(),
   email: varchar("email", { length: 255 }).unique().notNull(),
   firstName: varchar("first_name", { length: 100 }),
   lastName: varchar("last_name", { length: 100 }),
@@ -52,7 +51,6 @@ export const users = pgTable("users", {
 // Organizations table
 export const organizations = pgTable("organizations", {
   id: uuid("id").primaryKey().defaultRandom(),
-  workosOrgId: varchar("workos_org_id", { length: 255 }).unique().notNull(),
   name: varchar("name", { length: 255 }).notNull(),
   domain: varchar("domain", { length: 255 }),
 

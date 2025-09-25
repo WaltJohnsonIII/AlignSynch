@@ -1,6 +1,5 @@
 "use client";
 
-import { useAuth } from "@workos-inc/authkit-nextjs/components";
 import { handleSignOutAction } from "@/app/actions/signOut";
 import { Button } from "@/components/ui/button";
 
@@ -25,7 +24,7 @@ export function SignInButton({ large }: { large?: boolean }) {
 
   return (
     <Button asChild size={large ? "lg" : "default"}>
-      <a href="/login">Sign In {large && "with WorkOS"}</a>
+      <a href="/login">Sign In</a>
     </Button>
   );
 }

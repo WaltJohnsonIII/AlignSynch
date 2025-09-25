@@ -56,7 +56,6 @@ export const relationships = pgTable("relationships", {
   setting: relationshipSettingEnum("setting").default("Soft").notNull(),
   initiatorId: uuid("initiator_id").notNull(), // References users.id (uuid)
   coachId: uuid("coach_id"), // References users.id (uuid)
-  workosOrganizationId: varchar("workos_organization_id", { length: 255 }), // Link to WorkOS org
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
@@ -122,7 +121,6 @@ export const invites = pgTable("invites", {
   inviteeEmail: varchar("invitee_email", { length: 255 }).notNull(),
   role: userRoleEnum("role").notNull(), // 'counterparty' or 'coach'
   status: inviteStatusEnum("status").default("pending").notNull(),
-  workosInviteId: varchar("workos_invite_id", { length: 255 }), // Link to WorkOS invitation
   token: varchar("token", { length: 255 }).unique(), // Secure, single-use token
   expiresAt: timestamp("expires_at").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),

@@ -2,9 +2,6 @@
 
 // Mock environment variables
 process.env.NEXTAUTH_SECRET = "test-secret-key";
-process.env.WORKOS_API_KEY = "test-workos-api-key";
-process.env.WORKOS_CLIENT_ID = "test-workos-client-id";
-process.env.WORKOS_WEBHOOK_SECRET = "test-webhook-secret";
 process.env.DATABASE_URL = "postgresql://test:test@localhost:5432/test_db";
 
 // Global test setup

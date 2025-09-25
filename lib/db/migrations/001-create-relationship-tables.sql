@@ -19,7 +19,6 @@ CREATE TABLE relationships (
   setting relationship_setting DEFAULT 'Soft' NOT NULL,
   initiator_id INTEGER REFERENCES users(id) ON DELETE CASCADE NOT NULL,
   coach_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
-  workos_organization_id VARCHAR(255),
   created_at TIMESTAMP DEFAULT NOW() NOT NULL,
   updated_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
@@ -30,7 +29,6 @@ CREATE TABLE relationship_participants (
   relationship_id INTEGER REFERENCES relationships(id) ON DELETE CASCADE NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE NOT NULL,
   role VARCHAR(100) NOT NULL,
-  workos_user_id VARCHAR(255),
   created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
 
@@ -67,7 +65,6 @@ CREATE TABLE invites (
   invitee_email VARCHAR(255) NOT NULL,
   role user_role NOT NULL,
   status invite_status DEFAULT 'pending' NOT NULL,
-  workos_invite_id VARCHAR(255),
   token VARCHAR(255) UNIQUE,
   expires_at TIMESTAMP NOT NULL,
   created_at TIMESTAMP DEFAULT NOW() NOT NULL

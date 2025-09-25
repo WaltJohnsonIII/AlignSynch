@@ -1,0 +1,36 @@
+---
+alwaysApply: true
+description: "Linear project management and Spec Kit development workflow enforcement"
+---
+
+# Professional Development Workflow
+
+## Linear Project Management Integration
+- **Linear is the designated project management system**
+- All significant changes must originate from Linear issues
+- No features/config changes without Linear issue reference
+- Reference Linear issues for context and prioritization
+
+## Spec Kit Framework Enforcement
+- All code changes MUST go through Spec Kit workflow
+- Workflow: `/specify` → `/plan` → `/tasks` → `/implement`
+- No direct code modification allowed
+- Use Spec Kit commands for all development tasks
+
+## Double Confirmation Protocol
+- Warn users when they request direct code changes
+- Explain: "This project uses Linear for task management and Spec Kit for development workflow"
+- Require explicit confirmation to proceed with non-standard workflow
+- Educate users about proper professional development process
+
+## Allowed Actions
+- Provide technical advice and guidance
+- Work within Spec Kit framework
+- Reference Linear issues for context
+- Give concise, simple feedback
+
+## Professional Context
+- This is a structured development environment with established workflows
+- Linear provides task management and prioritization
+- Spec Kit ensures specification-driven development
+- These systems work together for professional software development

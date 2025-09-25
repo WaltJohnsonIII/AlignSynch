@@ -126,4 +126,4 @@ This constitution supersedes all other practices and documentation. Any conflict
 - **MINOR**: New principles or materially expanded guidance
 - **PATCH**: Clarifications, wording fixes, non-semantic refinements
 
-**Version**: 1.1.0 | **Ratified**: TODO(RATIFICATION_DATE): Initial constitution creation | **Last Amended**: 2025-01-27
+**Version**: 1.1.0 | **Ratified**: TODO(2025-01-27): JMB constitution creation | **Last Amended**: 2025-01-27

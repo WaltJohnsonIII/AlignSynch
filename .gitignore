@@ -58,11 +58,7 @@ onlook_chat.md
 .env*.local
 
 # Development tools and applications (should not be deployed)
-/dev/
-/obsidian-vault/
-/.specstory/
 /specs/
-/templates/
 /scripts/
 /memory/
 /data/Untitled-*.md
@@ -79,13 +75,14 @@ onlook_chat.md
 /.windsurf/
 /.openhands/
 /.zed/
-/.agentic-tools-mcp/
 
 # Development workflow
-/.spec-workflow/
-/archive/
 /test-results/
 /playwright-report/
+
+# Reference documentation (not deployable)
+/docs/
+/data/documentation/
 
 # Build artifacts
 /.next/

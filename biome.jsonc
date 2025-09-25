@@ -1,6 +1,9 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["ultracite"],
+  "files": {
+    "ignoreUnknown": true
+  },
   "linter": {
     "rules": {
       "suspicious": {

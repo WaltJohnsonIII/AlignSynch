@@ -1,10 +1,6 @@
 # Development files - exclude from Vercel deployment
-dev/
-.spec-workflow/
-.specstory/
-alignsynch/
-obsidian-vault/
-archive/
+docs/
+data/documentation/
 
 # Large binaries and installers
 *.zip

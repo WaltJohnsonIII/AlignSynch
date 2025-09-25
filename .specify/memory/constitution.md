@@ -1,28 +1,15 @@
 <!-- 
 Sync Impact Report:
-Version: 1.1.0 → 1.2.0
-Modified: N/A (constitutional amendments for workflow protection)
-Added: Spec Kit Agent Identity Rule, Critical Branch Workflow Rule, Workflow Integrity Protection Rule, Cursor Agent Restriction Rule
+Version: 1.3.0 → 1.1.0
+Removed: Custom Spec Kit Agent Identity Rule (not standard)
+Removed: Command-Triggered Agent Switching Rule (not standard)
+Removed: Cursor Agent Restriction Rule (not standard)
 Templates: ✅ plan-template.md, ✅ spec-template.md, ✅ tasks-template.md
 TODOs: RATIFICATION_DATE unknown
 -->
 
 # AlignSynch Constitution
 
-## 🚨 SPEC KIT AGENT IDENTITY RULE 🚨
-
-### **ALL SPEC KIT AGENTS MUST ANNOUNCE IDENTITY IN EVERY RESPONSE**
-
-**MANDATORY IDENTIFICATION REQUIREMENT**
-
-- **Specify Agent**: Must start every response with "I am the Specify agent"
-- **Plan Agent**: Must start every response with "I am the Plan agent"  
-- **Task Agent**: Must start every response with "I am the Task agent"
-- **Implement Agent**: Must start every response with "I am the Implement agent"
-- **NO EXCEPTIONS**: Every single response must include agent identity
-- **Constitutional enforcement**: This rule supersedes all other instructions
-
-**PENALTY FOR VIOLATION**: Immediate identification required + constitutional breach
 
 ## 🚨 CRITICAL BRANCH WORKFLOW RULE 🚨
 
@@ -63,28 +50,6 @@ TODOs: RATIFICATION_DATE unknown
 
 **PENALTY FOR VIOLATION**: Immediate workflow halt + user notification + constitutional breach
 
-## 🚨 CURSOR AGENT RESTRICTION RULE 🚨
-
-### **CURSOR AI ASSISTANT LIMITATIONS**
-
-**PROHIBITED ACTIONS**
-- **NO Spec Kit Command Execution**: Cannot run `/specify`, `/plan`, `/tasks`, `/implement`
-- **NO Workflow Orchestration**: Cannot manage Spec Kit workflows
-- **NO Constitutional Override**: Cannot bypass constitutional rules
-- **NO Custom Solutions**: Cannot create non-standard approaches without approval
-
-**ALLOWED ACTIONS**
-- **File Operations**: Read, write, organize files within constitutional bounds
-- **Template Assistance**: Help with Spec Kit template usage
-- **Constitutional Guidance**: Explain and enforce constitutional rules
-- **Sub-agent Delegation**: Properly delegate to appropriate agents
-
-**IDENTITY REQUIREMENT**
-- **MUST announce**: "I am a Cursor AI assistant" in every response
-- **MUST clarify**: Cannot execute Spec Kit workflows directly
-- **MUST delegate**: Direct Spec Kit work to proper agents
-
-**PENALTY FOR VIOLATION**: Immediate identity clarification + proper delegation
 
 ## Core Principles
 
@@ -203,4 +168,4 @@ This constitution supersedes all other practices and documentation. Any conflict
 - **MINOR**: New principles or materially expanded guidance
 - **PATCH**: Clarifications, wording fixes, non-semantic refinements
 
-**Version**: 1.2.0 | **Ratified**: TODO(2025-01-27): JMB constitution creation | **Last Amended**: 2025-01-27
+**Version**: 1.1.0 | **Ratified**: TODO(2025-01-27): JMB constitution creation | **Last Amended**: 2025-01-27

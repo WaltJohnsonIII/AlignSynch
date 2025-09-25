@@ -1,0 +1,36 @@
+# Standard Cursor Configuration
+
+## Project Overview
+This is a Next.js 15 application with React 19, TypeScript, and Tailwind CSS.
+
+## Tech Stack
+- Next.js 15 with App Router
+- React 19
+- TypeScript
+- Tailwind CSS
+- ShadCN UI components
+- Drizzle ORM
+- PostgreSQL
+- BetterAuth (authentication)
+
+## Coding Standards
+- Use TypeScript for all new files
+- Follow Next.js 15 best practices
+- Use Tailwind CSS for styling
+- Prefer ShadCN UI components
+- Follow React 19 patterns
+- Use proper TypeScript types
+
+## File Structure
+- `app/` - Next.js app router pages
+- `components/` - Reusable React components
+- `lib/` - Utility functions and configurations
+- `public/` - Static assets
+- `styles/` - Global styles
+
+## Guidelines
+- Write clean, readable code
+- Use meaningful variable and function names
+- Add proper TypeScript types
+- Follow React best practices
+- Keep components focused and reusable

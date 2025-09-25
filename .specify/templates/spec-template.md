@@ -36,6 +36,8 @@
 - **Mandatory sections**: Must be completed for every feature
 - **Optional sections**: Include only when relevant to the feature
 - When a section doesn't apply, remove it entirely (don't leave as "N/A")
+- **Constitution compliance**: All specs MUST follow spec-driven development principles
+- **Cursor integration**: Specs MUST be compatible with Cursor AI development workflow
 
 ### For AI Generation
 When creating this spec from a user prompt:

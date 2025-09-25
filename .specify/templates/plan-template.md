@@ -47,7 +47,34 @@
 ## Constitution Check
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+### TDD Compliance
+- [ ] All features follow Test-Driven Development
+- [ ] Tests written before implementation
+- [ ] Red-Green-Refactor cycle enforced
+
+### Spec-Driven Compliance
+- [ ] Complete specification exists (spec.md)
+- [ ] No implementation details in spec
+- [ ] All ambiguities marked with [NEEDS CLARIFICATION]
+
+### Quality Standards
+- [ ] ESLint configuration aligned
+- [ ] TypeScript strict mode enabled
+- [ ] Performance targets defined
+- [ ] Security requirements identified
+
+### Modern Stack Alignment
+- [ ] Next.js 15 App Router usage
+- [ ] React 19 features leveraged
+- [ ] Drizzle ORM for database
+- [ ] BetterAuth for authentication
+- [ ] CopilotKit for AI features
+
+### Cursor Environment Compliance
+- [ ] MCP servers configured (deepwiki, context7)
+- [ ] Workspace rules respected
+- [ ] AI development standards followed
+- [ ] File management patterns adhered to
 
 ## Project Structure
 
@@ -145,7 +172,7 @@ ios/ or android/
    - Quickstart test = story validation steps
 
 5. **Update agent file incrementally** (O(1) operation):
-   - Run `.specify/scripts/powershell/update-agent-context.ps1 -AgentType cursor`
+   - Run `.specify/scripts/powershell/update-agent-context.ps1 -AgentType copilot`
      **IMPORTANT**: Execute it exactly as specified above. Do not add or remove any arguments.
    - If exists: Add only NEW tech from current plan
    - Preserve manual additions between markers
@@ -209,4 +236,4 @@ ios/ or android/
 - [ ] Complexity deviations documented
 
 ---
-*Based on Constitution v2.1.1 - See `/memory/constitution.md`*
+*Based on Constitution v1.1.0 - See `/memory/constitution.md`*

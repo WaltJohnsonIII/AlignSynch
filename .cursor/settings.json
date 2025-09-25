@@ -1,0 +1,8 @@
+{
+  "cursor.ai.model": "auto",
+  "cursor.ai.autoModelSelection": true,
+  "cursor.ai.forceAutoModel": true,
+  "cursor.ai.disableModelSelection": true,
+  "cursor.ai.quotaProtection": true,
+  "cursor.ai.alwaysUseAuto": true
+}

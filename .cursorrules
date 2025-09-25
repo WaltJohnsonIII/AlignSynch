@@ -1,0 +1,19 @@
+# Cursor Agent Configuration
+# Force all agents to use "auto" model selection to avoid quota issues
+
+## Model Selection Rules
+- ALWAYS use "auto" model selection
+- NEVER specify specific models (Claude, GPT-4, etc.)
+- Let Cursor's auto-selection handle model choice
+- This prevents quota exhaustion on specific models
+
+## Agent Behavior
+- All AI agents must respect this auto model setting
+- No manual model overrides allowed
+- Auto model selection is optimal for quota management
+- Maintains functionality while preserving quota
+
+## Enforcement
+- This rule applies to all Cursor agents
+- Override any model-specific configurations
+- Ensure consistent auto model usage across all contexts

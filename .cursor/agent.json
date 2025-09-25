@@ -1,0 +1,9 @@
+{
+  "model": "auto",
+  "autoModelSelection": true,
+  "forceAutoModel": true,
+  "disableModelSelection": true,
+  "quotaProtection": true,
+  "alwaysUseAuto": true,
+  "instructions": "Always use auto model selection. Never specify specific models. This prevents quota exhaustion."
+}

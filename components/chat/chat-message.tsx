@@ -2,6 +2,7 @@
 
 import { Check, CheckCheck, Clock } from "lucide-react";
 import Image from "next/image";
+import { SmartImage } from "@/components/ui/smart-image";
 import { useState } from "react";
 import {
   Tooltip,
@@ -85,17 +86,14 @@ export function ChatMessage({
       {!isOwn && (
         <div className="flex-shrink-0" data-oid="byxb23p">
           <div className="relative h-7 w-7" data-oid=".i3vx77">
-            <Image
+            <SmartImage
               alt={contactName}
               className="mb-1 rounded-full border border-border object-cover"
-              data-oid="rfai_ie"
               height={28}
-              onError={() => setImageError(true)}
-              src={
-                imageError
-                  ? "/placeholder.svg?height=28&width=28"
-                  : contactAvatar
-              }
+              name={contactName}
+              placeholderType="svg"
+              src={contactAvatar || null}
+              type="avatar"
               width={28}
             />
           </div>
@@ -138,13 +136,14 @@ export function ChatMessage({
                         Loading image...
                       </span>
                     </div>
-                    <Image
+                    <SmartImage
                       alt="Shared image"
                       className="max-w-full rounded-lg object-contain"
-                      data-oid="5b:86cy"
                       height={200}
                       onLoad={() => setImageLoaded(true)}
-                      src={message.image || "/placeholder.svg"}
+                      placeholderType="svg"
+                      src={message.image || null}
+                      type="generic"
                       width={300}
                     />
                   </div>

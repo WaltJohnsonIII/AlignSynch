@@ -3,7 +3,7 @@
 import { UserCheck, UserPlus } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { UserAvatar } from "@/components/ui/user-avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -64,17 +64,7 @@ export function ProfileFollowing({ userId }: ProfileFollowingProps) {
               key={user.id}
             >
               <div className="flex items-center gap-3" data-oid=":l42-rp">
-                <Avatar data-oid="hpi60tc">
-                  <AvatarImage
-                    alt={user.name}
-                    data-oid="rqelnsn"
-                    src={user.avatar || "/placeholder.svg"}
-                  />
-
-                  <AvatarFallback data-oid="75m1ucp">
-                    {user.name.substring(0, 2)}
-                  </AvatarFallback>
-                </Avatar>
+                <UserAvatar className="size-10" name={user.name} src={user.avatar || null} />
                 <div data-oid="565-l26">
                   <Link
                     className="font-medium hover:underline"

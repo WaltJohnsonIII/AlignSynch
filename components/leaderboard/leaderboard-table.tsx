@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { UserAvatar } from "@/components/ui/user-avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -132,21 +132,9 @@ export function LeaderboardTable({
                 data-oid="5s_p1x_"
                 href={`/profile/${user.name.toLowerCase().replace(/\s+/g, "")}`}
               >
-                <Avatar
-                  className={`h-10 w-10 ${user.rank <= 3 ? "ring-2 ring-offset-2" + (user.rank === 1 ? "ring-amber-500" : user.rank === 2 ? "ring-gray-300" : "ring-amber-700") : ""}`}
-                  data-oid="8:m-l.w"
-                >
-                  <AvatarImage
-                    alt={user.name}
-                    className="object-cover object-center"
-                    data-oid=".bka9zg"
-                    src={user.avatar || "/placeholder.svg"}
-                  />
-
-                  <AvatarFallback data-oid="rca:zjw">
-                    {user.name.substring(0, 2)}
-                  </AvatarFallback>
-                </Avatar>
+                <div className={`h-10 w-10 rounded-full ${user.rank <= 3 ? "ring-2 ring-offset-2" + (user.rank === 1 ? " ring-amber-500" : user.rank === 2 ? " ring-gray-300" : " ring-amber-700") : ""}`} data-oid="8:m-l.w">
+                  <UserAvatar className="object-cover object-center" name={user.name} size={40} src={user.avatar || null} />
+                </div>
               </Link>
               <div data-oid="t45j1hk">
                 <Link

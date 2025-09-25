@@ -1,8 +1,8 @@
 
-# Implementation Plan: Linear-Cursor-Spec Kit Integration
+# Implementation Plan: [FEATURE]
 
-**Branch**: `002-github-spec-kit` | **Date**: 2025-01-27 | **Spec**: `/specs/002-github-spec-kit/spec.md`
-**Input**: Feature specification from `/specs/002-github-spec-kit/spec.md`
+**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
+**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
 
 ## Execution Flow (/plan command scope)
 ```
@@ -31,57 +31,23 @@
 - Phase 3-4: Implementation execution (manual or via tools)
 
 ## Summary
-**Primary Requirement**: Research and implement Linear-Cursor-Spec Kit integration for automated Spec Kit workflows with minimal custom code.
-
-**Technical Approach**: 
-- **Phase 1**: Comprehensive research of integration capabilities
-- **Phase 2**: Minimal implementation using best-in-class tools
-- **Phase 3+**: Iterative improvements and optimization
-
-**Key Objective**: Get systems working in a workflow that can iterate and improve.
+[Extract from feature spec: primary requirement + technical approach from research]
 
 ## Technical Context
-**Language/Version**: TypeScript/JavaScript, PowerShell, YAML  
-**Primary Dependencies**: Linear API, Cursor MCP, GitHub Actions, Spec Kit CLI  
-**Storage**: N/A (API-based integration)  
-**Testing**: Manual testing, integration validation  
-**Target Platform**: Cross-platform (Windows, macOS, Linux)  
-**Project Type**: Integration/Workflow automation  
-**Performance Goals**: <5 second workflow initiation, <30 second spec generation  
-**Constraints**: Minimal custom code, programmatic configuration preferred  
-**Scale/Scope**: Single team workflow, extensible to multiple teams
+**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
+**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
+**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
+**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
+**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
+**Project Type**: [single/web/mobile - determines source structure]  
+**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
+**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
+**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
 
 ## Constitution Check
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-### TDD Compliance
-- [ ] All features follow Test-Driven Development
-- [ ] Tests written before implementation
-- [ ] Red-Green-Refactor cycle enforced
-
-### Spec-Driven Compliance
-- [ ] Complete specification exists (spec.md)
-- [ ] No implementation details in spec
-- [ ] All ambiguities marked with [NEEDS CLARIFICATION]
-
-### Quality Standards
-- [ ] ESLint configuration aligned
-- [ ] TypeScript strict mode enabled
-- [ ] Performance targets defined
-- [ ] Security requirements identified
-
-### Modern Stack Alignment
-- [ ] Next.js 15 App Router usage
-- [ ] React 19 features leveraged
-- [ ] Drizzle ORM for database
-- [ ] BetterAuth for authentication
-- [ ] CopilotKit for AI features
-
-### Cursor Environment Compliance
-- [ ] MCP servers configured (deepwiki, context7)
-- [ ] Workspace rules respected
-- [ ] AI development standards followed
-- [ ] File management patterns adhered to
+[Gates determined based on constitution file]
 
 ## Project Structure
 
@@ -156,21 +122,6 @@ ios/ or android/
 
 **Output**: research.md with all NEEDS CLARIFICATION resolved
 
-### Speed vs. Future-Alignment Choices
-**FAST PATH (Immediate Solution)**:
-- ✅ **Manual Linear setup** (20 minutes) + basic webhook integration
-- ✅ **Simple GitHub Action** with hardcoded Linear issue creation
-- ✅ **Direct Cursor CLI** execution without MCP complexity
-- ✅ **Basic Spec Kit workflow** with minimal automation
-
-**FUTURE-ALIGNED PATH (Better Long-term)**:
-- ✅ **Programmatic Linear configuration** via API
-- ✅ **MCP server integration** for real-time communication
-- ✅ **Infrastructure-as-Code** approach for repeatable setup
-- ✅ **Advanced automation** with intelligent workflow orchestration
-
-**RECOMMENDATION**: Start with FAST PATH to get working, then iterate to FUTURE-ALIGNED PATH
-
 ## Phase 1: Design & Contracts
 *Prerequisites: research.md complete*
 
@@ -194,7 +145,7 @@ ios/ or android/
    - Quickstart test = story validation steps
 
 5. **Update agent file incrementally** (O(1) operation):
-   - Run `.specify/scripts/powershell/update-agent-context.ps1 -AgentType copilot`
+   - Run `.specify/scripts/powershell/update-agent-context.ps1 -AgentType cursor`
      **IMPORTANT**: Execute it exactly as specified above. Do not add or remove any arguments.
    - If exists: Add only NEW tech from current plan
    - Preserve manual additions between markers
@@ -258,4 +209,4 @@ ios/ or android/
 - [ ] Complexity deviations documented
 
 ---
-*Based on Constitution v1.1.0 - See `/memory/constitution.md`*
+*Based on Constitution v2.1.1 - See `/memory/constitution.md`*
